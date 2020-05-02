@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Grade Calculator </title>
+</head>
+
+<body>
+
+<p>
+    <h2>Grade Components</h2>
+    <h3>Please Enter Your Grade Components For This Course</h3>
+    <TABLE BORDER=2 CELLSPACING=2 CELLPADDING=2>
+
+
+    <tr>
+    <td>Type</td>
+    <td>Weight</td>
+    </tr>
+
+    <tr>
+    <td>Homework</td>
+    <td><input type="text" id="homework" size=2 value=""></td>
+    </tr>
+
+    <tr>
+    <td>Labs</td>
+    <td><input type="text" id="labs" size=2 value=""></td>
+    </tr>
+
+    <tr>
+    <td>Midterm</td>
+    <td><input type="text" id="midterm" size=2 value=""></td>
+    </tr>
+
+    <tr>
+    <td>Final Exam</td>
+    <td><input type="text" id="finals" size=2 value=""></td>
+    </tr>
+
+    <br><br>
+
+<input type="button" value="Save Your Grade Components" onclick="components()">
+
+    <hr>
+    <div id="outputDiv1" style="height: 50px; width: 100%;"></div>
+
+
+</p>
+<p>
+    <h2>Grade Calculator</h2>
+    <h3>Please Enter Your Grade Out Of 100 For Each Section</h3>
+    <TABLE BORDER=2 CELLSPACING=2 CELLPADDING=2>
+
+    <tr>
+    <td>Type</td>
+    <td>Weight</td>
+    <td>Grade</td>
+    </tr>
+
+    <tr>
+    <td>Homework</td>
+    <td><input type="text" id="comp_homework" size=2 value=""></td>
+    <td><input type="text" id="homework" size=2 value=""></td>
+    </tr>
+
+    <tr>
+    <td>Labs</td>
+    <td><input type="text" id="comp_labs" size=2 value=""></td>
+    <td><input type="text" id="labs" size=2 value=""></td>
+    </tr>
+
+    <tr>
+    <td>Midterm</td>
+    <td><input type="text" id="comp_midterm" size=2 value=""></td>
+    <td><input type="text" id="midterm" size=2 value=""></td>
+    </tr>
+
+    <tr>
+    <td>Final Exam</td>
+    <td><input type="text" id="comp_finals" size=2 value=""></td>
+    <td><input type="text" id="finals" size=2 value=""></td>
+    </tr>
+
+    <br><br>
+
+    <input type="button" value="Calculate Your Grade" onclick="calculator()">
+
+    <hr>
+    <div id="outputDiv2" style="height: 50px; width: 100%;"></div>
+
+    <script type="text/javascript">
+
+        function calculator()
+        {
+            var grade1=parseFloat(document.getElementById('homework').value*comp1/100);
+            var grade2=parseFloat(document.getElementById('labs').value*comp2/100);
+            var grade3=parseFloat(document.getElementById('midterm').value*comp3/100);
+            var grade4=parseFloat(document.getElementById('finals').value*comp4/100);
+            var total=grade1+grade2+grade3+grade4;
+
+            var display=document.getElementById('outputDiv2');
+
+            display.innerHTML='Your Final Grade Is: ' +total;
+        }
+        
+        function components()
+        {
+            var comp1=parseFloat(document.getElementById('homework').value);
+            var comp2=parseFloat(document.getElementById('labs').value);
+            var comp3=parseFloat(document.getElementById('midterm').value);
+            var comp4=parseFloat(document.getElementById('finals').value);
+            
+            var total=comp1+comp2+comp3+comp4;
+            var display=document.getElementById('outputDiv1');
+            if (total == 100){
+                display.innerHTML='You Are All Set. Now You Can Enter Your Grades';
+// Dorel: I don't know how to make the components show on the second table
+                display = document.getElementById('comp_homework');
+                displey.innerHTML(comp1);
+                display = document.getElementById('comp_labs');
+                displey.innerHTML(comp2);
+                display = document.getElementById('comp_midterm');
+                displey.innerHTML(comp3);
+                display = document.getElementById('comp_finals');
+                displey.innerHTML(comp4);
+            } else{
+                display.innerHTML='Your components must add up to 100';
+            }
+
+        }
+    </script>
