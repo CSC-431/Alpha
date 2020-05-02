@@ -4,11 +4,12 @@ The purpose of this project is to improve the efficiency of college students by 
 It will be a student-friendly website with an elaborate UI database software, website development tools, Adobe Photoshop, and a HTML / CSS development environment that will be used to complete this project. 
 
 This project was made possible by:
-Borui Wang:     Developer
-Morgan Ritter:  Developer
-Ross Pierson:   Developer
-Maya Miller:    Developer
-Hayeon Oh:      Team Leader, Developer
-Zhenyuan Wang:  Developer
-Dorel Last:     Developer
+
+Borui Wang  Developer	|
+Morgan Ritter	 Developer	|
+Ross Pierson   Developer	|
+Maya Miller  Developer	|
+Hayeon Oh  Team Leader, Developer	|
+Zhenyuan Wang  Developer	|
+Dorel Last   Developer	|
 
