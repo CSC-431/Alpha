@@ -53,7 +53,10 @@
     var count = 1;
     function addClass()
     {
-      count++;
+      if (count < 11)
+      {
+        count++;
+      }
       var word = "btn" + count;
       document.getElementById(word).style.display = "block";
     }
